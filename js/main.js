@@ -20,7 +20,7 @@ function updateActiveLink() {
   let current = '';
   sections.forEach((section) => {
     const top = section.offsetTop - 120;
-    if (window.scrollY >= top ; window.scrollY < top + section.offsetHeight) {
+    if (window.scrollY >= top && window.scrollY < top + section.offsetHeight) {
       current = section.getAttribute('id');
     }
   });
@@ -74,7 +74,7 @@ navLinksEl.querySelectorAll('.nav-link').forEach((link) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' ; navLinksEl.classList.contains('open')) closeMenu();
+  if (e.key === 'Escape' && navLinksEl.classList.contains('open')) closeMenu();
 });
 
 /* =====================================================
@@ -110,10 +110,10 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name    = (document.getElementById('contactName').value    ; '').trim();
-    const email   = (document.getElementById('contactEmail').value   ; '').trim();
-    const subject = (document.getElementById('contactSubject').value ; '').trim();
-    const message = (document.getElementById('contactMessage').value ; '').trim();
+    const name    = (document.getElementById('contactName').value    || '').trim();
+    const email   = (document.getElementById('contactEmail').value   || '').trim();
+    const subject = (document.getElementById('contactSubject').value || '').trim();
+    const message = (document.getElementById('contactMessage').value || '').trim();
 
     if (!name || !email || !subject || !message) return;
 
