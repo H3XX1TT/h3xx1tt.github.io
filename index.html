@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio von Jan-Richard Wichmann – Fachinformatiker für Anwendungsentwicklung. Java, Spring Boot, JavaScript, Python und mehr." />
+  <meta name="author" content="Jan-Richard Wichmann" />
+  <meta property="og:title" content="Jan-Richard Wichmann | Portfolio" />
+  <meta property="og:description" content="Fachinformatiker für Anwendungsentwicklung – Java, Spring Boot, JavaScript, Python, Docker & mehr." />
+  <meta property="og:type" content="website" />
+  <title>Jan-Richard Wichmann | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar" aria-label="Hauptnavigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Zurück zur Startseite">
+        <span class="logo-bracket">&lt;</span>JW<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">Über mich</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projekte</a></li>
+        <li><a href="#contact"  class="nav-link">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-greeting">
+        <span class="wave">👋</span> Hallo, ich bin
+      </p>
+      <h1 class="hero-title">
+        Jan-Richard<br />
+        <span class="gradient-text">Wichmann</span>
+      </h1>
+      <div class="hero-subtitle">
+        <span class="typing-prefix">Ich bin </span>
+        <span class="typing-text" id="typingText" aria-live="polite"></span>
+        <span class="typing-cursor" aria-hidden="true">|</span>
+      </div>
+      <p class="hero-desc">
+        Fachinformatiker für Anwendungsentwicklung mit Leidenschaft für sauberen Code,
+        moderne Technologien und kontinuierliches Wachstum.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket" aria-hidden="true"></i> Meine Projekte
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fas fa-comments" aria-hidden="true"></i> Kontakt aufnehmen
+        </a>
+      </div>
+      <div class="hero-social" aria-label="Social Media Links">
+        <a href="https://github.com/h3xx1tt" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profil">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jan-wichmann-525b34195/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:janwichmann12@gmail.com" aria-label="E-Mail schreiben">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Nach unten scrollen">
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </div>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// über mich</span>
+        <h2 class="section-title">Wer bin ich?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-placeholder" aria-label="Avatar Jan-Richard Wichmann">
+              <span>JW</span>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Jahre Erfahrung</span>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="9">0</span>
+              <span class="stat-label">Technologien</span>
+            </div>
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Motivation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <p class="about-text">
+            Ich bin <strong>Jan-Richard Wichmann</strong>, ausgebildeter Fachinformatiker für Anwendungsentwicklung
+            mit einer echten Leidenschaft fürs Programmieren. Für mich ist Softwareentwicklung nicht nur ein Beruf –
+            es ist meine Berufung.
+          </p>
+          <p class="about-text">
+            Ich strebe danach, mich kontinuierlich weiterzuentwickeln, neue Technologien zu erlernen
+            und mit meiner Arbeit einen echten Mehrwert zu schaffen. Sauberer, wartbarer Code und
+            durchdachte Softwarearchitektur stehen dabei stets im Mittelpunkt.
+          </p>
+          <p class="about-text">
+            Mein Schwerpunkt liegt auf der Backend-Entwicklung mit <strong>Java & Spring Boot</strong>,
+            der Full-Stack-Webentwicklung sowie DevOps-Themen rund um <strong>Docker & CI/CD</strong>.
+            Herausforderungen spornen mich an – Probleme lösen ist das, was mich antreibt.
+          </p>
+          <div class="about-tags" role="list" aria-label="Eigenschaften">
+            <span class="tag" role="listitem">Teamplayer</span>
+            <span class="tag" role="listitem">Problemlöser</span>
+            <span class="tag" role="listitem">Schneller Lerner</span>
+            <span class="tag" role="listitem">Clean Code</span>
+            <span class="tag" role="listitem">Agil</span>
+            <span class="tag" role="listitem">Detailorientiert</span>
+          </div>
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Lass uns reden
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// skills</span>
+        <h2 class="section-title">Was ich kann</h2>
+        <p class="section-subtitle">
+          Technologien, mit denen ich täglich arbeite und die ich beherrsche.
+        </p>
+      </div>
+
+      <div class="skills-categories">
+        <!-- Sprachen -->
+        <div class="skill-category reveal">
+          <h3 class="category-title">
+            <i class="fas fa-code" aria-hidden="true"></i> Programmiersprachen
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-java">
+                  <i class="fab fa-java" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">Java</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Java 90%">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-js">
+                  <i class="fab fa-js" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">JavaScript / TypeScript</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript TypeScript 85%">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-python">
+                  <i class="fab fa-python" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">Python</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Python 75%">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-html">
+                  <i class="fab fa-html5" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">HTML / CSS</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML CSS 85%">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-lua">
+                  <i class="fas fa-moon" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">Lua</span>
+                <span class="skill-percent">70%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Lua 70%">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Tools -->
+        <div class="skill-category reveal">
+          <h3 class="category-title">
+            <i class="fas fa-layer-group" aria-hidden="true"></i> Frameworks & Tools
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-spring">
+                  <i class="fas fa-leaf" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">Spring / Spring Boot</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Spring Boot 85%">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-docker">
+                  <i class="fab fa-docker" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">Docker / DevOps</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Docker DevOps 75%">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-git">
+                  <i class="fab fa-git-alt" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">Git / GitHub</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Git GitHub 90%">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-header">
+                <div class="skill-icon-wrap color-sql">
+                  <i class="fas fa-database" aria-hidden="true"></i>
+                </div>
+                <span class="skill-name">SQL / Datenbanken</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="SQL Datenbanken 80%">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// projekte</span>
+        <h2 class="section-title">Meine Projekte</h2>
+        <p class="section-subtitle">
+          Ausgewählte Projekte, an denen ich gearbeitet habe.
+          Weitere findest du auf <a href="https://github.com/h3xx1tt" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Projekt 1 -->
+        <article class="project-card reveal-up">
+          <div class="project-top">
+            <div class="project-folder">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub Repository" aria-label="GitHub Repository">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="project-link" title="Live Demo" aria-label="Live Demo öffnen">
+                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Projekt 1</h3>
+          <p class="project-desc">
+            Kurze Beschreibung des Projekts. Was wurde gebaut, welches Problem wurde gelöst
+            und welche besonderen Herausforderungen gab es dabei?
+          </p>
+          <ul class="project-tech" aria-label="Verwendete Technologien">
+            <li><span class="tech-tag">Java</span></li>
+            <li><span class="tech-tag">Spring Boot</span></li>
+            <li><span class="tech-tag">PostgreSQL</span></li>
+          </ul>
+        </article>
+
+        <!-- Projekt 2 -->
+        <article class="project-card reveal-up">
+          <div class="project-top">
+            <div class="project-folder">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub Repository" aria-label="GitHub Repository">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="project-link" title="Live Demo" aria-label="Live Demo öffnen">
+                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Projekt 2</h3>
+          <p class="project-desc">
+            Kurze Beschreibung des Projekts. Was wurde gebaut, welches Problem wurde gelöst
+            und welche besonderen Herausforderungen gab es dabei?
+          </p>
+          <ul class="project-tech" aria-label="Verwendete Technologien">
+            <li><span class="tech-tag">JavaScript</span></li>
+            <li><span class="tech-tag">Node.js</span></li>
+            <li><span class="tech-tag">Docker</span></li>
+          </ul>
+        </article>
+
+        <!-- Projekt 3 -->
+        <article class="project-card reveal-up">
+          <div class="project-top">
+            <div class="project-folder">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub Repository" aria-label="GitHub Repository">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="project-link" title="Live Demo" aria-label="Live Demo öffnen">
+                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Projekt 3</h3>
+          <p class="project-desc">
+            Kurze Beschreibung des Projekts. Was wurde gebaut, welches Problem wurde gelöst
+            und welche besonderen Herausforderungen gab es dabei?
+          </p>
+          <ul class="project-tech" aria-label="Verwendete Technologien">
+            <li><span class="tech-tag">Python</span></li>
+            <li><span class="tech-tag">SQL</span></li>
+            <li><span class="tech-tag">Git</span></li>
+          </ul>
+        </article>
+
+        <!-- Mehr folgt -->
+        <article class="project-card project-more reveal-up">
+          <div class="project-more-inner">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <p>Mehr auf GitHub</p>
+            <a href="https://github.com/h3xx1tt" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+              Profil ansehen
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// kontakt</span>
+        <h2 class="section-title">Let's connect!</h2>
+        <p class="section-subtitle">
+          Interessantes Projekt, Jobangebot oder einfach ein nettes Gespräch?
+          Ich freue mich über jede Nachricht.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div>
+              <span class="contact-label">E-Mail</span>
+              <a href="mailto:janwichmann12@gmail.com" class="contact-value">janwichmann12@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/h3xx1tt" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/h3xx1tt</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/jan-wichmann-525b34195/" target="_blank" rel="noopener noreferrer" class="contact-value">Jan Wichmann</a>
+            </div>
+          </div>
+          <p class="contact-availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Aktuell offen für neue Möglichkeiten
+          </p>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input
+              type="text"
+              id="contactName"
+              name="name"
+              placeholder="Dein Name"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">E-Mail</label>
+            <input
+              type="email"
+              id="contactEmail"
+              name="email"
+              placeholder="deine@email.de"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Betreff</label>
+            <input
+              type="text"
+              id="contactSubject"
+              name="subject"
+              placeholder="Worum geht es?"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Nachricht</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="5"
+              placeholder="Deine Nachricht..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Nachricht senden
+          </button>
+          <p class="form-note">Öffnet deinen Standard-E-Mail-Client.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="footer-logo" aria-label="Nach oben scrollen">
+          <span class="logo-bracket">&lt;</span>JW<span class="logo-bracket">/&gt;</span>
+        </a>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#about">Über mich</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projekte</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+        <div class="footer-social" aria-label="Social Media">
+          <a href="https://github.com/h3xx1tt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jan-wichmann-525b34195/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:janwichmann12@gmail.com" aria-label="E-Mail">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="footer-copy">
+          Entwickelt mit <i class="fas fa-heart footer-heart" aria-hidden="true"></i> von
+          <strong>Jan-Richard Wichmann</strong> &mdash; &copy; 2025
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
