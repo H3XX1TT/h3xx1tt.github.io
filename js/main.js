@@ -145,3 +145,120 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+/* =====================================================
+   SCROLL PROGRESS BAR
+   ===================================================== */
+const progressBar = document.getElementById('scroll-progress');
+
+if (progressBar) {
+  window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max > 0) progressBar.style.transform = `scaleX(${window.scrollY / max})`;
+  }, { passive: true });
+}
+
+/* =====================================================
+   CURSOR SPOTLIGHT
+   ===================================================== */
+const spotlight = document.getElementById('cursor-spotlight');
+
+if (spotlight && window.matchMedia('(pointer: fine)').matches) {
+  document.addEventListener('mousemove', (e) => {
+    requestAnimationFrame(() => {
+      spotlight.style.background =
+        `radial-gradient(700px at ${e.clientX}px ${e.clientY}px, rgba(200,250,95,0.05), transparent 80%)`;
+    });
+  }, { passive: true });
+}
+
+/* =====================================================
+   TYPING ANIMATION – Hero role
+   ===================================================== */
+const heroRole = document.querySelector('.hero-role');
+
+if (heroRole) {
+  const originalText = heroRole.textContent.trim();
+  heroRole.textContent = '';
+
+  const cursor = document.createElement('span');
+  cursor.className = 'typing-cursor';
+  cursor.setAttribute('aria-hidden', 'true');
+  heroRole.appendChild(cursor);
+
+  let charIndex = 0;
+  const SPEED = 42;
+  const START_DELAY = 500;
+
+  function typeNextChar() {
+    if (charIndex < originalText.length) {
+      heroRole.insertBefore(document.createTextNode(originalText[charIndex++]), cursor);
+      setTimeout(typeNextChar, SPEED);
+    } else {
+      setTimeout(() => {
+        if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
+      }, 2800);
+    }
+  }
+
+  setTimeout(typeNextChar, START_DELAY);
+}
+
+/* =====================================================
+   COUNTER ANIMATION – Fact values with data-count
+   ===================================================== */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix || '';
+  if (isNaN(target)) return;
+
+  const duration = 1400;
+  let startTime = null;
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function tick(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    el.textContent = Math.floor(easeOutCubic(progress) * target) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
+const counterEls = document.querySelectorAll('[data-count]');
+
+if (counterEls.length) {
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.5 }
+  );
+  counterEls.forEach((el) => counterObserver.observe(el));
+}
+
+/* =====================================================
+   MAGNETIC BUTTON EFFECT
+   ===================================================== */
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.btn-arrow').forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width  / 2) * 0.18;
+      const y = (e.clientY - rect.top  - rect.height / 2) * 0.18;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transition = 'transform 0.45s cubic-bezier(0.16,1,0.3,1)';
+      btn.style.transform  = 'translate(0, 0)';
+      setTimeout(() => { btn.style.transition = ''; }, 450);
+    });
+  });
+}

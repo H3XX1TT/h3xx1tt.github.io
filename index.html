@@ -18,6 +18,9 @@
 </head>
 <body>
 
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-spotlight" aria-hidden="true"></div>
+
   <!-- ========== NAVIGATION ========== -->
   <nav id="navbar" aria-label="Hauptnavigation">
     <div class="nav-container">
@@ -71,6 +74,9 @@
 
       </div>
     </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="scroll-line"></span>
+    </div>
   </section>
 
   <!-- ========== ABOUT ========== -->
@@ -123,7 +129,7 @@
             </div>
             <div class="fact-row">
               <span class="fact-label">Erfahrung</span>
-              <span class="fact-value">3+ Jahre</span>
+              <span class="fact-value" data-count="3" data-suffix="+ Jahre">3+ Jahre</span>
             </div>
             <div class="fact-row">
               <span class="fact-label">Standort</span>
